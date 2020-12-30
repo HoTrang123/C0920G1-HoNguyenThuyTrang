@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = parseInt(prompt("nhap vao so phan tu cua mang"));
+    let k = parseInt(prompt("nhap vao so k"));
+    while (!isNaN(k)) {
+        if (str > 50) {
+            alert("so phan tu can nho hon 50");
+        } else {
+            let arr = [];
+            for (let i = 0; i < str; i++) {
+                arr[i] = parseInt(prompt("nhap vao phan tu thu " + i));
+            }
+            let temp = 0;
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = i + 1; j < arr.length; j++) {
+                    if ((arr[i] + arr[j]) % k === 0) {
+                        temp++;
+                    }
+                }
+            }
+            alert(temp);
+        }
+    }
+</script>
+</body>
+</html>

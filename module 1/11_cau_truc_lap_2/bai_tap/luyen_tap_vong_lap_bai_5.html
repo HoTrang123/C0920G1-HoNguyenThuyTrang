@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number=2;
+    let a=1;
+    let b=1;
+    let c;
+    let tong=0;
+    document.write(a+"<br>");
+    document.write(b+"<br>");
+    while (number<20){
+        c=a+b;
+        tong +=c;
+        a=b;
+        b=c;
+        document.write(c+"<br>");
+        number++;
+    }
+    document.write("tổng là:"+tong);
+</script>
+</body>
+</html>

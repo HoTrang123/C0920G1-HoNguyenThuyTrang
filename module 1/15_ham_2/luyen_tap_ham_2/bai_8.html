@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = parseInt(prompt("Nhap: "));
+    let str = num.toString();
+    let arr1=[];
+    for (let i =0; i<str.length; i++) {
+        arr1[i] = str[i];
+    }hoanDoi(arr1);
+    alert(arr1);
+    function hoanDoi(arr) {
+       let first=0;
+       let last = arr.length-1;
+       while (first<last) {
+           let a = arr[first];
+           arr[first] = arr[last];
+           arr[last] = a;
+           first++;
+           last--;
+           return arr;
+       }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let number=1;
+    // let a;
+    // let tong=0;
+    // while (number<=30){
+    //     a= 7*number;
+    //     tong+=a;
+    //         number++;
+    //     document.write(a+"<br>");
+    // }
+    // document.write("tổng là:"+tong)
+    let number=prompt("nhập:");
+    let count=0;
+    let n=7;
+    let result =0;
+    while (count<number){
+        if (n%7===0){
+            count++;
+            result+=n;
+        }
+        n++;
+    }
+    document.write(result);
+</script>
+</body>
+</html>

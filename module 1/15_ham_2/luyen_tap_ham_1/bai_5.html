@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="text" onchange="display(this.value)">
+<p id="result"></p>
+<script>
+    function display(tr) {
+        let arr1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let arr2 = ["Ursa Minor", "Tarsus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        for (let i = 0; i < arr2.length; i++) {
+            if (tr === arr1[i]) {
+                document.getElementById("result").innerHTML = arr2[i];
+                break;
+            } else
+                document.getElementById("result").innerText = "No result"
+        }
+
+    }
+</script>
+</body>
+</html>

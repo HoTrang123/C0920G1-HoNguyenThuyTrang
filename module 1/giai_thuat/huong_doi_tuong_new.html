@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="display"></div>
+<div id="edit"></div>
+<div id="create"></div>
+<script>
+    class Product {
+        constructor(id, name, price, amount) {
+            this.id = id;
+            this.name = name;
+            this.price = price;
+            this.amount = amount;
+        }
+
+        getId() {
+            return this.id;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        getPrice() {
+            return this.price;
+        }
+
+        getAmount() {
+            return this.amount;
+        }
+
+        setId(id) {
+            this.id = id;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        setPrice(price) {
+            this.price = price;
+        }
+
+        setAmount(amount) {
+            this.amount = amount;
+        }
+    }
+
+    let listProduct = [];
+    listProduct.push(new Product(1, "Iphone", 2000, 5));
+    listProduct.push(new Product(2, "SamSung", 1000, 10));
+    listProduct.push(new Product(3, "Oppo", 1000, 15));
+
+    function displayProduct() {
+        let temp = "<button onclick='createProduct()'>Create Product</button>";
+        temp += "<table>";
+        temp += "<tr>" +
+            "<th>Id</th>" +
+            "<th>Name</th>" +
+            "<th>Price</th>" +
+            "<th>Amount</th>" +
+            "</tr>";
+        for (let i in listProduct) {
+            temp += "<tr>" +
+                "<td>" + listProduct[i].getId() + "</td>" +
+                "<td>" + listProduct[i].getName() + "</td>" +
+                "<td>" + listProduct[i].getPrice() + "</td>" +
+                "<td>" + listProduct[i].getAmount() + "</td>" +
+                "<td><input type='button' value='Edit' onclick='editProduct(" + i + ")'></td>" +
+                "<td><input type='button' value='Delete' onclick='deleteProduct(" + i + ")'></td>" +
+                "</tr>";
+        }
+        temp += "</table>";
+        document.getElementById("display").innerHTML = temp;
+    }
+
+    displayProduct();
+
+    function editProduct(index) {
+        let temp = "<h3>Edit Product</h3>";
+        temp += "<input type='text' disabled value='" + listProduct[index].getId() + "'><br>" +
+            "<input type='text' id='editName' value='" + listProduct[index].getName() + "'><br>" +
+            "<input type='text' id='editPrice' value='" + listProduct[index].getPrice() + "'><br>" +
+            "<input type='text' id='editAmount' value='" + listProduct[index].getAmount() + "'><br>" +
+            "<input type='button' value='Submit' onclick='submit(" + index + ")'>";
+        document.getElementById("edit").innerHTML = temp;
+    }
+
+    function submit(index) {
+        listProduct[index].setName(document.getElementById("editName").value);
+        listProduct[index].setPrice(document.getElementById("editPrice").value);
+        listProduct[index].setAmount(document.getElementById("editAmount").value);
+        document.getElementById("edit").innerText = " ";
+        displayProduct();
+    }
+
+    function deleteProduct(index) {
+        if (confirm("Ban co muon xoa san pham " + listProduct[index].getName() + " hay khong?")) {
+            listProduct.splice(index, 1);
+        }
+        displayProduct();
+    }
+
+    function createProduct() {
+        let temp = "<h3>Create Product</h3>";
+        temp += "Id: <input type='text' id='createId'><br>" +
+            "Name: <input type='text' id='createName'><br>" +
+            "Price: <input type='text' id='createPrice'><br>" +
+            "Amount: <input type='text' id='createAmount'><br>" +
+            "<input type='button' value='Create' onclick='create()'>";
+        document.getElementById("create").innerHTML = temp;
+    }
+
+    function create() {
+        let id1 = document.getElementById("createId").value;
+        let name1 = document.getElementById("createName").value;
+        let price1 = document.getElementById("createPrice").value;
+        let amount1 = document.getElementById("createAmount").value;
+        let product1 = new Product(id1, name1, price1, amount1);
+        listProduct.push(product1);
+        document.getElementById("create").innerText = " ";
+        displayProduct();
+    }
+
+</script>
+</body>
+</html>

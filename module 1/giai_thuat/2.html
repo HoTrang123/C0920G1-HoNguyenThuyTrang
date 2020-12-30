@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mounth = parseInt(prompt("Nhập vào tháng cần kiểm tra:"));
+    let year = parseInt(prompt("Nhập vào năm cần kiểm tra: "));
+    switch (mounth) {
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            alert("Tháng có 31 ngày nhé!!");
+            break;
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            alert("Tháng có 30 ngày nhé!!");
+            break;
+        case 2:
+            if (year%4 ===0 && year%100 !==0 || year%400 ===0){
+            alert("Tháng có 29 ngày nhé!!");
+            } else {
+            alert("Tháng có 28 ngày nhé!!");
+            }
+    }
+</script>
+
+</body>
+</html>

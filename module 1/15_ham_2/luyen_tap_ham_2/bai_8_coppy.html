@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.
+    let amount = prompt('Nhập số phần tử mảng');
+    let arr1 = [];
+    for (let i = 0; i < amount; i++) {
+        arr1[i] = prompt('Nhập phần tử thứ ' + i);
+    }
+    daoMang(arr1);
+    alert(arr1);
+    function daoMang(arr) {
+        for (let i = 0; i <= (arr.length-1)/2; i++) {
+            let temp = arr[i];
+            arr[i] = arr[arr.length - 1 - i];
+            arr[arr.length - 1 - i] = temp;
+        }
+    }
+</script>
+</body>
+</html>

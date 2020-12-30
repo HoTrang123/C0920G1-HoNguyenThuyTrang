@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a= parseFloat(prompt("Enter a number: "));
+    function test(num) {
+        if (Number.isInteger(num)){
+            if (num>0){
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
+    alert(test(a));
+</script>
+</body>
+</html>

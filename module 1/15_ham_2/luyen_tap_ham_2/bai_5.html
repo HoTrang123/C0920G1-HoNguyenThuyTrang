@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a= parseInt(prompt("Number 1: "));
+    let b= parseInt(prompt("Number 2: "));
+    let c= parseInt(prompt("Number 3: "));
+    function min(a,b,c) {
+        if (a<b){
+            if (a<c){
+                return a;
+            } else {
+                return c;
+            }
+        } else {
+            return b;
+        }
+    }
+alert(min(a,b,c));
+</script>
+</body>
+</html>

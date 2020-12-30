@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" oninput="sum(this.value)">
+<p id="display">Result:</p>
+<script>
+    function sum(num) {
+        let a= parseInt(num);
+        num++;
+        document.getElementById("display").innerHTML= num;
+
+    }
+</script>
+</body>
+</html>

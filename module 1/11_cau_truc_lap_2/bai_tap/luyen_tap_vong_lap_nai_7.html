@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let check=true;
+    while (check)
+    for (let i=1;i<=100;i++){
+        if (i%5===0 && i%3===0){
+            document.write("FizzBizz"+"<br>");
+        }else if (i%5===0){
+            document.write("Bizz"+"<br>");
+        }else if (i%3===0){
+            document.write("Fizz"+"<br>");
+        }else {
+            check=false;
+            document.write(i+"<br>");
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+</head>
+<body>
+<form action="tao_form_don_gian.html" method="get";>
+    <fieldset style="width : 500px; border: 10px solid cadetblue">
+        <P style="color: white; width: 500px; height: 30px; text-align: center; background-color: red; margin-left:5px; margin-top: 5px" >SỞ THÍCH CỦA BẠN</P>
+        <p style="color: blue">Họ và tên <input type="text" name="yourname"> </p>
+        <p style="color: blue; margin-left: 25px" >Email <input type="text" name="email"> </p>
+        <p style="color: orange"> <span style="color: blue; margin-left: 10px">Sở thích</span>
+
+            <label><input style="color: orange" type="checkbox" name="the_thao">Thể thao</label>
+            <label><input style="color: orange" type="checkbox" name="am_nhac">Âm nhạc</label>
+            <label><input style="color: orange" type="checkbox" name="doc_sach">Đọc Sách</label><br>
+            <label><input type="checkbox" style="margin-left: 70px; color: orange" name="luot_web">Lướt web</label>
+            <label><input style="color: orange" type="checkbox" name="choi_game">Chơi game</label>
+            <label><input style="color: orange" type="checkbox" name="dien_anh">Điện ảnh</label><br>
+            <label><input type="checkbox" style="margin-left: 70px; color: orange" name="du_lich">Du lịch</label>
+        </p>
+        <p>
+            <input style="margin-left: 70px" type="submit" value="Gởi thông tin">
+            <input type="reset" value="Nhập lại">
+        </p>
+    </fieldset>
+</form>
+<br> <br><br>
+
+
+<form action="tao_form_don_gian.html" method="post">
+    <fieldset style="width: 450px; color: yellowgreen">
+        <p style="width:450px; height:30px; color: blue; background-color: aqua; margin-top: 5px ">ĐĂNG KÝ HỌC VIÊN</p>
+        <p style="color: blue;"> Họ và tên<Input type="text" name="name" style="margin-left: 10px">
+        <p style="color: blue">Ngày sinh <input type="date" name="date" style="margin-left: 4px"></p>
+        <p style="color: black"> <span style="color: blue">Giới tính</span>
+            <label><input type="radio" style="margin-left: 15px"> Nam</label>
+            <label><input type="radio"> Nữ</label>
+        </p>
+        <p style="color: blue">Địa chỉ <textarea cols="30"; rows="5" style="margin-left: 22px"></textarea> </p>
+        <p style="color: blue"> Lớp
+            <select style="margin-left: 45px">
+                <option>-Chọn Lớp-</option>
+                <option> A</option>
+                <option> B</option>
+                <option> C</option>
+                <option> D</option>
+            </select>
+        </p>
+        <p style="color: blue">Email <input type="text" name="email" style="margin-left: 30px"><br>
+            Điện thoại<input type="text" style="margin-left: 5px"></p>
+        <p> <input type="submit" value="Đăng kí" style="margin-left: 75px"> <input type="reset" value="Nhập lại"></p>
+    </fieldset>
+</form>
+</body>
+</html>

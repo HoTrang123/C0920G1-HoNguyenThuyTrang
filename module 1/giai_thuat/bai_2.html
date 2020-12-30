@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("nhap n: "));
+    let temp= "";
+    for (let i = 0; i < n; i++) {
+        if (i === n - 1) {
+            for (let j = 0; j <= i; j++) {
+                temp += "*";
+            }
+        } else {
+            for (let j = 0; j <= i; j++) {
+                if (j === 0 || j === i) {
+                    temp += "*";
+                } else {
+                    temp += " ";
+                }
+            }
+            temp +="<br>";
+        }
+
+    }
+    alert(temp);
+    document.write("<pre>"+temp+"</pre>");
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhập số:<input type="number" id="num"><input type="button" value="kiểm tra" onclick="check()"></p>
+<p id="hienthi"></p>
+<script>
+    function check() {
+        let num = document.getElementById("num").value;
+        let a;
+        for (let i = 2; i < num; i++) {
+            if (num % i === 0) {
+                a = true;
+                break;
+            }
+        }
+        if (a) {
+            document.getElementById("hienthi").innerText = "không phải là số nguyên tố"
+        } else {
+            document.getElementById("hienthi").innerText = "là số nguyên tố"
+        }
+
+    }
+</script>
+</body>
+</html>

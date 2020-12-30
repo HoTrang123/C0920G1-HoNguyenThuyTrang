@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="thuy_trang:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/thuy_trang_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="thuy_trang/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="thuy_trang" />
+          <element id="library" level="project" name="css" />
+          <element id="library" level="project" name="css1" />
+          <element id="library" level="project" name="js" />
+          <element id="library" level="project" name="jquery" />
+          <element id="library" level="project" name="js1" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="mysql-connector-java-8.0.17" />
+          <element id="library" level="project" name="jstl-1.2" />
+          <element id="library" level="project" name="taglibs-standard-spec-1.2.5" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

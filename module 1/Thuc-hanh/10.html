@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="string">
+<input type="text" id="test">
+<button onclick="result()">prompt</button>
+<p id="display"></p>
+<script>
+    function result(){
+        let str = document.getElementById("string").value;
+        let a = document.getElementById("test").value;
+        str = str.split("");
+        let temp = 0;
+        for (let i = 0; i<str.length; i++){
+            if (str[i] === a){
+                temp ++;
+            }
+        } alert(temp);
+    }
+</script>
+</body>
+</html>

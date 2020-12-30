@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array =[];
+    while (true) {
+    let choose = parseInt(prompt("1.Add a customer"+ "\n" +"2.Delete a customer"));
+        switch (choose) {
+            case 1: {
+                let number = parseInt(prompt("Enter a number: "));
+                for (let i = 0; i < number; i++) {
+                    let name = prompt("Input customer: ");
+                    array.push(name);
+                }
+                let customer = "";
+                array.sort();
+                for (let i = 0; i < array.length; i++) {
+                    customer += array[i] + "\n";
+                }
+                alert(customer);
+
+            }
+                break;
+            case 2: {
+                let deleteCus = prompt("Input name you want delete: ");
+                let check =false;
+                for (let i = 0; i < array.length; i++) {
+                    if (array[i] === deleteCus) {
+                        array.splice(i, 1);
+                        check =true;
+                    }
+                }
+                if (!check){
+                    alert("Not delete")
+                }
+                let customer = "";
+                array.sort();
+                for (let i = 0; i < array.length; i++) {
+                    customer += array[i] + "\n";
+                }
+                alert(customer);
+
+            }
+                break;
+            default: {
+                alert("No result");
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [1,2,3,4,5];
+    let k = 3;
+    arr.push(2);
+    for (let i = k; i < arr.length; i++) {
+        let temp = arr[i];
+        arr[i] = arr[arr.length - 1];
+        arr[arr.length - 1] = temp;
+    }
+    document.write(arr);
+</script>
+</body>
+</html>

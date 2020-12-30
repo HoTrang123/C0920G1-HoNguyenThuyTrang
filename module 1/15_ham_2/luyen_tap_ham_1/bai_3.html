@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Number 1:<input type="number" id="num1" value="num1"></p>
+<p>Number 2:<input type="number" id="num2" value="num2"></p>
+<input type="button" value="Result" onclick="result()">
+<script>
+    function result() {
+        let a = parseInt(num1.value);
+        let b = parseInt(num2.value);
+        if (a>b){
+            return alert("Number 1 max");
+        }else {
+            let sum = a + b;
+            return alert(sum);
+        }
+    }
+</script>
+</body>
+</html>

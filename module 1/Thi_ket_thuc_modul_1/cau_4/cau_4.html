@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="display"></div>
+<div id="create"></div>
+<button onclick='findCus()'>Find Customer</button>
+<script>
+    class Customer {
+        constructor(id, name, phone, address, email) {
+            this.id = id;
+            this.name = name;
+            this.phone = phone;
+            this.address = address;
+            this.email = email;
+        }
+
+        getId() {
+            return this.id;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        getPhone() {
+            return this.phone;
+        }
+
+        getAddress() {
+            return this.address;
+        }
+
+        getEmail() {
+            return this.email;
+        }
+
+        setId(id) {
+            this.id = id;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        setPhone(phone) {
+            this.phone = phone;
+        }
+
+        setAddress(address) {
+            this.address = address;
+        }
+
+        setEmail(email) {
+            this.email = email;
+        }
+    }
+
+    let listCustomer = [];
+    listCustomer.push(new Customer(1, "Ho", "012345", "QN", "abc@abc.com"));
+    listCustomer.push(new Customer(2, "Thuy", "012345", "Hue", "abc@abc.com"));
+    listCustomer.push(new Customer(3, "Trang", "012345", "DN", "abc@abc.com"));
+
+    function displayCustomer() {
+        let temp = "<button onclick='addCustomer()'>Add Customer</button>";
+        temp += "<table>";
+        temp += "<tr>" +
+            "<th>Id</th>" +
+            "<th>Name</th>" +
+            "<th>Phone</th>" +
+            "<th>Address</th>" +
+            "<th>Email</th>" +
+            "</tr>";
+        for (let i in listCustomer) {
+            temp += "<tr>" +
+                "<td>" + listCustomer[i].getId() + "</td>" +
+                "<td>" + listCustomer[i].getName() + "</td>" +
+                "<td>" + listCustomer[i].getPhone() + "</td>" +
+                "<td>" + listCustomer[i].getAddress() + "</td>" +
+                "<td>" + listCustomer[i].getEmail() + "</td>" +
+                "</tr>";
+        }
+        temp += "</table>";
+        document.getElementById("display").innerHTML = temp;
+    }
+
+    displayCustomer();
+
+    function addCustomer() {
+        let temp = "<h3>Add Customer</h3>";
+        temp += "Id: <input type='text' id='addId'><br>" +
+            "Name: <input type='text' id='addName'><br>" +
+            "Phone: <input type='text' id='addPhone'><br>" +
+            "Address: <input type='text' id='addAddress'><br>" +
+            "Email: <input type='text' id='addEmail'><br>" +
+            "<input type='button' value='Create' onclick='create()'>";
+        document.getElementById("create").innerHTML = temp;
+    }
+
+    function create() {
+        let id1 = document.getElementById("addId").value;
+        let name1 = document.getElementById("addName").value;
+        let phone1 = document.getElementById("addPhone").value;
+        let address1 = document.getElementById("addAddress").value;
+        let email1 = document.getElementById("addEmail").value;
+        let cus1 = new Customer(id1, name1, phone1, address1, email1);
+        listCustomer.push(cus1);
+        document.getElementById("create").innerText = " ";
+        displayCustomer();
+    }
+
+    function findCus() {
+        let find = "<input type='text' id='findCus' onchange='find()'>";
+    }
+
+    function find() {
+        for (let i = 0; i < listCustomer.length; i++) {
+            if (listCustomer[i] == document.getElementById("findCus").value) {
+
+            }
+        }
+    }
+</script>
+</body>
+</html>

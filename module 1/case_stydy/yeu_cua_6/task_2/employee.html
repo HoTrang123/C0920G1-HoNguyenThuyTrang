@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="employee.js"></script>
+<script>
+    let listEmploy = [];
+    function displayMainMenu() {
+        let choose = parseInt(prompt("1. Add new employee."
+            + "\n2. Display infomation Employee."
+            + "\n3. Salary of employee."
+            + "\n4. Exit."));
+        switch (choose) {
+            case 1:{
+                addNewEmployee();
+                break;
+            }
+            case 2:{
+                displayEmployee();
+                break;
+            }
+            default:{
+                displayMainMenu();
+                break;
+            }
+        }
+    }
+    function displayEmployee() {
+        let temp = "";
+        for (let i = 0; i < listCustomer.length; i++){
+            temp += (i+1) + ". Name: " + listCustomer[i].name + "\n";
+        }
+        temp += "\nChoose only one number";
+        let chooseDisplay = parseInt(prompt(temp));
+        chooseDisplay = chooseDisplay - 1;
+        if (chooseDisplay >= 0 && chooseDisplay < listCustomer.length) {
+            alert("Name: " + listCustomer[chooseDisplay].getNameEmployee()
+                + "\nIdentityNumber: " + listCustomer[chooseDisplay].getIdentityNumber()
+                + "\nBirthday: " + listCustomer[chooseDisplay].getBirthday()
+                + "\nEmail: " + listCustomer[chooseDisplay].getEmail()
+                + "\nPhone: " + listCustomer[chooseDisplay].getPhone()
+                + "\nLevel: " + listCustomer[chooseDisplay].getLevel()
+                + "\nLocation: " + listCustomer[chooseDisplay].getLocation()
+                + "\nQuantity Include: " + listCustomer[chooseDisplay].getSalary());
+            displayMainMenu();
+        }else {
+            alert("Not have this number.");
+            displayMainMenu();
+        }
+    }
+    function addNewEmployee() {
+        let employee = new Employee();
+        employee.setNameEmployee(prompt("Input name: "));
+        employee.setBirthday(prompt("Input Birthday: "));
+        employee.setPhone(prompt("Input Phone: "));
+        employee.setEmail(prompt("Input Email: "));
+        employee.setIdentityNumber(prompt("Input Identity number: "));
+        employee.setLevel(prompt("Input Level: "));
+        employee.setLocation(prompt("Input Location: "));
+        listEmploy.push(employee);
+        alert("Added Employee");
+        displayMainMenu();
+    }
+    displayMainMenu();
+</script>
+</body>
+</html>

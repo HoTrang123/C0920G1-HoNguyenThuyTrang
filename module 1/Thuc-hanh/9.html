@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt("Nhap chuoi: ");
+    str = str.split("");
+    for (let i = 0; i < str.length; i++){
+        if(str[i].charCodeAt() > 97 ){
+            str[i] = str[i].toUpperCase();
+        } else {
+            str[i] = str[i].toLowerCase();
+        }
+    }
+    str = str.join("");
+    alert(str);
+
+</script>
+</body>
+</html>

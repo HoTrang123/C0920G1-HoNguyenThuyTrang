@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="unnamed">
+    <output-path>$PROJECT_DIR$/out/artifacts/unnamed</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="mysql-connector-java-8.0.17" />
+          <element id="library" level="project" name="taglibs-standard-impl-1.2.5" />
+          <element id="library" level="project" name="tomcat-juli" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

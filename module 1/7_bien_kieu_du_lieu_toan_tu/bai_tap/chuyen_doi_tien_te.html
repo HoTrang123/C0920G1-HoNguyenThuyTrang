@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <p><span style="margin-left: 50px">Amout</span> <span style="margin-left: 100px">From Cerency</span> <SPAN style="margin-left: 70PX">To Cerency</SPAN></p>
+   <INPUT type="text" style="width: 150px" id="nhap">
+    <select style="width: 100px; margin-left: 30px" id="from">
+        <option value="VN">VietNam</option>
+        <option value="M">USD</option>
+        <option value="P">EUR</option>
+    </select>
+    <select style="width: 100px; margin-left: 55px" id="to">
+        <option value="VN">VietNam</option>
+        <option value="M">USD</option>
+        <option value="P">EUR</option>
+    </select>
+    <button type="button" style="margin-left: 20px" onclick="chuyenDoi()">Convert</button>
+</form>
+<script>
+    function chuyenDoi() {
+        var nhap = document.getElementById("nhap").value;
+        var from = document.getElementById("from").value;
+        var to = document.getElementById("to").value;
+        var tinhTien;
+nhap= parseInt(nhap);
+if (from==="VN"&& to==="VN")
+    tinhTien = nhap;
+if (from==="M"&& to==="M")
+    tinhTien=nhap;
+        if (from==="P"&& to==="P")
+            tinhTien=nhap;
+        if (from === "VN" && to === "M") {
+            tinhTien = nhap/23000;
+        }
+        if (from === "VN" && to === "P") {
+            tinhTien = nhap/4000;
+        }
+        if (from === "M" && to === "VN") {
+            tinhTien = nhap*23000;
+        }
+        if (from === "M" && to === "P") {
+            tinhTien = nhap*5;
+        }
+        if (from === "P" && to === "VN") {
+            tinhTien = nhap*4000;
+        }
+        if (from === "P" && to === "M") {
+            tinhTien = nhap/5;
+        }
+        alert(tinhTien);
+    }
+</script>
+</body>
+</html>

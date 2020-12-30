@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number;
+    let count =2;
+    let a =1;
+    let b =1;
+    document.writeln(a);
+    document.writeln(b);
+    let c;
+    do{
+        number =parseInt(prompt("nhap so luong so fibonacci can hien thi: "));
+    }  while (isNaN(number));
+    while (count<number) {
+        c=a+b;
+        a=b;
+        b=c;
+        document.writeln(c);
+        count++;
+    }
+</script>
+</body>
+</html>

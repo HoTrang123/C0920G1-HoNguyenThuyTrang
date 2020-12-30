@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Caculator</h2>
+<input type="number" id="N1">
+<input type="number"id="N2">
+<br><br>
+<button onclick="caculator('+')">Addition</button>
+<button onclick="caculator('-')">Subtraction</button>
+<button onclick="caculator('*')">Multiplication</button>
+<button onclick="caculator('/')">Division</button>
+<script>
+    let number1= document.getElementById("N1");
+    let number2= document.getElementById("N2");
+    let result;
+function caculator(cal) {
+if(cal==='+'){
+    result= parseInt(number1.value) + parseInt(number2.value)
+}
+if (cal==='-'){
+    result= number1.value - number2.value;
+}
+if (cal==='*'){
+           result=number2.value*number1.value;
+       }
+if (cal==='/'){
+           result=number1.value/number2.value;
+    }
+    alert(result);
+}
+</script>
+</body>
+</html>

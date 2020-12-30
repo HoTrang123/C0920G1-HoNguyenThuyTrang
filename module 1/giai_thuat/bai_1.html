@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = prompt("nhap mang: ");
+    let a = arr.split("");
+    alert(a);
+    let b = [];
+    let temp = 0;
+    for (let i = 0; i < a.length; i++){
+        temp += parseInt(a[i]);
+        b[i] = temp;
+    }
+    alert(b)
+</script>
+</body>
+</html>

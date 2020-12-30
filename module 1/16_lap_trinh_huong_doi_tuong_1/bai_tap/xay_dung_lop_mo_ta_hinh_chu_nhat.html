@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="100" height="100" style="border: 1px solid"></canvas>
+<script>
+    class Rectangle {
+        constructor(length, width) {
+            this.length = length;
+            this.width = width;
+        }
+        getLength() {
+            return this.length;
+        }
+        getWidth() {
+            return this.width;
+        }
+        getAcreage() {
+            return this.length*this.width;
+        }
+        getPerimeter() {
+            return 2*(this.length + this.width);
+        }
+        setRectangle(length,width){
+            this.length = length;
+            this.width = width;
+        }
+    };
+    let rectangle = new Rectangle(50,40);
+    let length = rectangle.getLength();
+    let width = rectangle.getWidth();
+    let acreage = rectangle.getAcreage();
+    let perimeter = rectangle.getPerimeter();
+    let canvas = document.getElementById("myCanvas");
+    let ctx = canvas.getContext("2d");
+    ctx.fillStyle ="red";
+
+    alert("Acreage = " + acreage + "; Perimeter = " + perimeter);
+    ctx.fillRect(0,0,length,width)
+
+    rectangle.setRectangle(70,50);
+    alert("Acreage = " + rectangle.getAcreage() + "; Perimeter = " + rectangle.getPerimeter());
+    ctx.fillRect(0,0,rectangle.getLength(),rectangle.getWidth())
+
+
+
+
+</script>
+</body>
+</html>

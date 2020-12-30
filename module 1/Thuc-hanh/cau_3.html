@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // function isFib(x) {
+    //     let f1 = 1;
+    //     let f2 = 1;
+    //     while (f2 <= x) {
+    //         if (x === 1) {
+    //             return true;
+    //         }
+    //         if (x === f2) {
+    //             return true;
+    //         } else {
+    //             let temp = f1;
+    //             f1 = f2;
+    //             f2 = temp + f2;
+    //         }
+    //     }
+    //     return false;
+    // }
+    //
+    // isFib(x);
+    function isFibonacci(x) {
+        let a = 1;
+        let b = 1;
+        let c;
+        while (b <= x) {
+            if (x === b) {
+                return true;
+            } else {
+                c = a + b;
+                a = b;
+                b = c;
+            }
+        }
+        return false;
+    }
+    let x1 = 9;
+    alert(isFibonacci(x1));
+</script>
+</body>
+</html>

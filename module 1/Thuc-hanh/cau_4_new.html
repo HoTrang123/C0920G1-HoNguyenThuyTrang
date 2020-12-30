@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Circle {
+        constructor(context2D, x, y, radius, color) {
+            this.ctx2D = context2D;
+            this.x = x;
+            this.y = y;
+            this.radius = radius;
+            this.color = color;
+        };
+        render() {
+            this.ctx2D.beginPath();
+            this.ctx2D.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+            this.ctx2D.strokeStyle = this.color;
+            this.ctx2D.stroke();
+        };
+    }
+    const render = document.getElementById('myCanvas');
+    const ctx = render.getContext("2d");
+
+    const  circle = new Circle(ctx, 100, 100, 100, "#ff413e");
+    circle.render();
+
+    const circle2 = new Circle(ctx, 150, 150, 100, "#ff413e");
+    circle2.render();
+</script>
+</body>
+</html>

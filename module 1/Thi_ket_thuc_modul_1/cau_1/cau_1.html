@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = parseInt(prompt("nhap vao so phan tu cua mang"));
+    if (str > 20) {
+        alert("so phan tu can nho hon 20");
+    } else {
+        let arr = [];
+        for (let i = 0; i < str; i++) {
+            arr[i] = parseInt(prompt("nhap vao phan tu thu " + i));
+
+        } alert(arr);
+        let sum = 0;
+        for (let j = 0; j < arr.length; j++) {
+            if (arr[j] % 3 === 0 && arr[j] % 5 === 0) {
+                sum += arr[j];
+            }
+        }
+        alert("tong cua cac phan tu chia het cho 3 va 5 la: " + sum);
+    }
+
+</script>
+</body>
+</html>

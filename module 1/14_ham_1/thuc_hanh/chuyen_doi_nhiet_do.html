@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form>
+<!--    <p>-->
+<!--        <label>Fahrenheit</label>-->
+<!--        <input id="inputFahrenheit" type="number" placeholder="Fahrenheit"-->
+<!--               oninput="temperatureConverter(this.value)"-->
+<!--               onchange="temperatureConverter(this.value)">-->
+<!--    </p>-->
+<!--    <p>Celsius: <span id="outputCelsius"></span></p>-->
+    <p>Fahrenheit:<input id="doF" type="number" oninput="inputdoF()" onchange="inputdoF()"></p>
+    <p>Celsius: <span id="doC"></span></p>
+</form>
+
+<script>
+
+    function inputdoF() {
+        let valNum;
+        valNum = document.getElementById("doF").value;
+        document.getElementById("doC").innerHTML = (valNum-32) / 1.8;
+    }
+
+</script>
+</body>
+</html>
