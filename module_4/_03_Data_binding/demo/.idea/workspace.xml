@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bdf6299f-40da-4188-8b15-4ed5142ae831" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../DemoCustomer/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DemoCustomer/src/main/java/com/trang/controllers/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DemoCustomer/src/main/java/com/trang/repositories/ICustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DemoCustomer/src/main/java/com/trang/repositories/implement/CustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DemoCustomer/src/main/java/com/trang/repositories/implement/DBConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DemoCustomer/src/main/java/com/trang/repositories/models/CustomerEDM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DemoCustomer/src/main/java/com/trang/services/ICustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DemoCustomer/src/main/java/com/trang/services/implement/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DemoCustomer/src/main/java/com/trang/services/models/CustomerDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DemoCustomer/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DemoCustomer/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DemoCustomer/src/main/webapp/WEB-INF/views/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DemoCustomer/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_01_Spring_MVC/thuc_hanh_1/src/controllers/GreetingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_02_Spring_Controller/bai_tap_1/sandwich_condiments/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_02_Spring_Controller/bai_tap_1/sandwich_condiments/src/main/java/controllers/CheckController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_02_Spring_Controller/bai_tap_1/sandwich_condiments/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_02_Spring_Controller/bai_tap_1/sandwich_condiments/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_02_Spring_Controller/bai_tap_1/sandwich_condiments/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_02_Spring_Controller/bai_tap_1/sandwich_condiments/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_02_Spring_Controller/thuc_hanh_1/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_02_Spring_Controller/thuc_hanh_1/spring-greeting/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_02_Spring_Controller/thuc_hanh_1/src/main/java/controller/EmailController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_02_Spring_Controller/thuc_hanh_1/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_02_Spring_Controller/thuc_hanh_1/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_02_Spring_Controller/thuc_hanh_1/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_02_Spring_Controller/thuc_hanh_1/src/main/webapp/success.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_02_Spring_Controller/thuc_hanh_2/ spring-timezone/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_02_Spring_Controller/thuc_hanh_2/ spring-timezone/src/main/java/controllers/TimeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_02_Spring_Controller/thuc_hanh_2/ spring-timezone/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_02_Spring_Controller/thuc_hanh_2/ spring-timezone/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_02_Spring_Controller/thuc_hanh_2/ spring-timezone/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_02_Spring_Controller/thuc_hanh_2/ spring-timezone/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_02_Spring_Controller/thuc_hanh_3/manager_customer/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_02_Spring_Controller/thuc_hanh_3/manager_customer/src/main/java/thuchanh/controllers/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_02_Spring_Controller/thuc_hanh_3/manager_customer/src/main/java/thuchanh/models/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_02_Spring_Controller/thuc_hanh_3/manager_customer/src/main/java/thuchanh/services/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_02_Spring_Controller/thuc_hanh_3/manager_customer/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_02_Spring_Controller/thuc_hanh_3/manager_customer/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_02_Spring_Controller/thuc_hanh_3/manager_customer/src/main/webapp/WEB-INF/templates/customers/info.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_02_Spring_Controller/thuc_hanh_3/manager_customer/src/main/webapp/WEB-INF/templates/customers/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../_02_Spring_Controller/thuc_hanh_3/manager_customer/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh_1/spring-user-model/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh_1/spring-user-model/src/main/java/com/codegym/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh_1/spring-user-model/src/main/java/com/codegym/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh_1/spring-user-model/src/main/java/com/codegym/model/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh_1/spring-user-model/src/main/java/com/codegym/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh_1/spring-user-model/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh_1/spring-user-model/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh_1/spring-user-model/src/main/webapp/WEB-INF/views/error.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh_1/spring-user-model/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh_1/spring-user-model/src/main/webapp/WEB-INF/views/user.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh_1/spring-user-model/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh_3/spring-mvc-form-tutorial/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh_3/spring-mvc-form-tutorial/src/main/java/controller/EmployeeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh_3/spring-mvc-form-tutorial/src/main/java/model/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh_3/spring-mvc-form-tutorial/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh_3/spring-mvc-form-tutorial/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh_3/spring-mvc-form-tutorial/src/main/webapp/WEB-INF/employee/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh_3/spring-mvc-form-tutorial/src/main/webapp/WEB-INF/employee/info.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../thuc_hanh_3/spring-mvc-form-tutorial/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1me3FgfnEdMbEPMPpE2hXX8cyqL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bdf6299f-40da-4188-8b15-4ed5142ae831" name="Default Changelist" comment="" />
+      <created>1609840126751</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609840126751</updated>
+      <workItem from="1609840128259" duration="653000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="208" y="23" width="1024" height="823" key="#Project_Structure" timestamp="1609840994624">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state x="208" y="23" width="1024" height="823" key="#Project_Structure/0.23.1440.823@0.23.1440.823" timestamp="1609840994624" />
+    <state x="114" y="47" key="new project wizard" timestamp="1609841039572">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state x="114" y="47" key="new project wizard/0.23.1440.823@0.23.1440.823" timestamp="1609841039572" />
+  </component>
+</project>
