@@ -1,5 +1,7 @@
 package com.codegym.model;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class Product {
     private int id;
     private String name;
@@ -14,6 +16,10 @@ public class Product {
         this.img = img;
         this.quantity = quantity;
     }
+
+    public Product() {
+    }
+
 
     public int getId() {
         return id;
@@ -54,4 +60,6 @@ public class Product {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+
+
 }
