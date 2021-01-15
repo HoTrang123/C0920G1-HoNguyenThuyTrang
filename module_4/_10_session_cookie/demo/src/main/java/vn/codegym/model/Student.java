@@ -10,7 +10,8 @@ import java.util.Date;
 import java.util.Set;
 
 @Entity
-public class Student implements Validator {
+public class
+Student implements Validator {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
