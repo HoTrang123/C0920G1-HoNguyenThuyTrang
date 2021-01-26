@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link type="text/css" rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            height: 150px;
+            width: 270px;
+        }
+
+        h1 {
+            color: green;
+        }
+
+
+        h5 {
+            margin-left: 90px;
+        }
+
+        .col-sm-9 img {
+            width: 100%;
+
+        }
+
+        .icon img {
+            width: 100%;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+
+<form>
+    <div class="container-fluid">
+        <header th:replace="common::hearder"></header>
+
+        <div class="row" style="background-color: aliceblue">
+            <div class="col-sm-3">
+                <div class="row">
+                    <img th:src="@{/img/villa.jpg}" alt="villa-icon">
+                    <h5>Villa System</h5>
+                    <img th:src="@{/img/house.jpg}" alt="house-icon">
+                    <h5>Home System</h5>
+                    <img th:src="@{/img/room.jpg}" alt="room-icon">
+                    <h5>Room System</h5>
+                </div>
+            </div>
+
+            <div class="col-sm-9">
+                <div class="row">
+                    <div  style=" text-align: justify">
+                        <h1 style="text-align: center">FURAMA RESORT</h1>
+                        <img style="height: 700px; margin-right: 25px"
+                         th:src="@{/img/resort1.jpg}" alt="pic2"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <footer th:replace="common::footer"></footer>
+    </div>
+
+    <script src="/bootstrap/jquery/jquery-3.5.1.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/bootstrap/js/popper.min.js"></script>
+</form>
+
+</body>
+</html>
