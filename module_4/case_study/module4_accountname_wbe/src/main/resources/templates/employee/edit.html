@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+    <title>Edit Employee</title>
+
+</head>
+<body>
+<div class="container-fluid">
+    <header th:replace="common::header"></header>
+    <div align="center">
+        <div>
+            <div class="container">
+                <form class="well form-horizontal" action=" " th:action="@{/employee/edit}" th:object="${employee}"
+                      method="post" id="contact_form">
+                    <fieldset>
+                        <legend>
+                            <center><h2><b>Edit employee</b></h2></center>
+                        </legend>
+                        <br>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">ID employee</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <input name="idEmployee" placeholder="ID Employee" class="form-control" type="text"
+                                           th:field="*{id}" readonly>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Name:</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <input name="name" placeholder="Name Employee" class="form-control"
+                                           type="text"
+                                           th:field="*{name}" required>
+                                </div>
+                            </div>
+                            <label style="color: red" th:if="${#fields.hasErrors('name')}"
+                                   th:errors="*{name}"></label>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">BirthDay</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <input name="birthday" placeholder="BirthDay Employee" class="form-control"
+                                           type="date" th:field="*{birthDay}" required>
+                                </div>
+                            </div>
+                            <label style="color: red" th:if="${#fields.hasErrors('birthDay')}"
+                                   th:errors="*{birthDay}"></label>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">ID Card</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <input name="idCard" class="form-control"
+                                           type="text" th:field="*{idCard}" required>
+                                </div>
+                            </div>
+                            <label style="color: red" th:if="${#fields.hasErrors('idCard')}" th:errors="*{idCard}"></label>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Salary</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <input name="salary" placeholder="Salary" class="form-control"
+                                           type="text" th:field="*{salary}" required>
+                                </div>
+                            </div>
+
+                            <label style="color: red" th:if="${#fields.hasErrors('salary')}" th:errors="*{salary}"></label>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Phone:</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <input name="phone"  class="form-control"
+                                           type="text" th:field="*{phone}" required>
+                                </div>
+                            </div>
+                            <label style="color: red" th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></label>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Email:</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <input name="email"  class="form-control"
+                                           type="text" th:field="*{email}" required>
+                                </div>
+                            </div>
+                            <label style="color: red" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></label>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Address:</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <input name="address"  class="form-control"
+                                           type="text" th:field="*{address}" required>
+                                </div>
+                            </div>
+                            <label style="color: red" th:if="${#fields.hasErrors('address')}" th:errors="*{address}"></label>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Division:</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <select class="form-control" th:field="*{division}" required>
+                                        <option th:each="division1 : ${divisionList}"
+                                                th:value="${division1.divisionId}"
+                                                th:text="${division1.getDivisionName()}"></option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Education Degree:</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <select class="form-control" th:field="*{educationDegree}" required>
+                                        <option th:each="educationDegree:${educationDegreeList}"
+                                                th:value="${educationDegree.getEducationDegreeId()}"
+                                                th:text="${educationDegree.getEducationDegreeName()}"></option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Position:</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <select class="form-control" th:field="*{position}" required>
+                                        <option th:each="position:${positionList}"
+                                                th:value="${position.getPositionId()}"
+                                                th:text="${position.getPositionName()}"></option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="col-12" for="user">User</label>
+                            <input id="user" class="form-control col-12" type="text" th:field="*{user.username}">
+                        </div>
+
+                        <!-- Button -->
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <button type="submit" class="btn btn-warning">UPDATE</button>
+                                <button type="submit" class="btn btn-warning"><a th:href="@{/employee}"
+                                                                                 style="text-decoration: none; color: #0c0c0c">CANCEL</a>
+                                </button>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer th:replace="common::footer"></footer>
+</div>
+</body>
+</html>

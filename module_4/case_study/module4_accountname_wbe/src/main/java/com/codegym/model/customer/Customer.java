@@ -1,10 +1,12 @@
 package com.codegym.model.customer;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
-import java.util.List;
+import java.util.Date;
 
 @Entity(name = "customer")
 public class Customer {
@@ -16,8 +18,8 @@ public class Customer {
     @NotBlank(message = "Do Not Blank")
     private String name;
 
-    @NotBlank(message = "Do Not Blank")
-    private String birthday;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date birthday;
 
     @NotBlank(message = "Do Not Blank")
     private String gender;
@@ -65,11 +67,11 @@ public class Customer {
         this.name = name;
     }
 
-    public String getBirthday() {
+    public Date getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(String birthday) {
+    public void setBirthday(Date birthday) {
         this.birthday = birthday;
     }
 

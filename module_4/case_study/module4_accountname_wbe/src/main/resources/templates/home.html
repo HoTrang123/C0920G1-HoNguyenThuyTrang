@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link type="text/css" rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}">
 
     <style>
         * {
@@ -69,10 +69,10 @@
         <footer th:replace="common::footer"></footer>
     </div>
 
-    <script src="/bootstrap/jquery/jquery-3.5.1.min.js"></script>
-    <script src="/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/bootstrap/js/popper.min.js"></script>
-</form>
 
+</form>
+<script th:src="@{/bootstrap/jquery/jquery-3.5.1.min.js}"></script>
+<script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+<script th:src="@{/bootstrap/js/popper.min.js}"></script>
 </body>
 </html>

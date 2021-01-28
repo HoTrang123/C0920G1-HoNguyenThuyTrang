@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+    <title>Detail View Employee</title>
+    <link type="text/css" rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+
+</head>
+<body>
+<div class="container-fluid">
+    <header th:replace="common::header"></header>
+    <div align="center">
+        <div>
+            <div class="container">
+                <form class="well form-horizontal" action=" " th:action="@{/employee/detailView}" th:object="${view}"
+                      method="post" id="contact_form">
+                    <fieldset>
+                        <legend>
+                            <center><h2><b>Detail View Employee</b></h2></center>
+                        </legend>
+                        <br>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">ID Employee</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <input  class="form-control" type="text"
+                                           th:field="*{id}" readonly>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Name Customer</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <input  class="form-control" type="text"
+                                           th:field="*{name}" readonly>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">BirthDay</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <input class="form-control"
+                                           type="date" th:field="*{birthDay}" readonly>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">ID Card</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <input  class="form-control"
+                                           type="text" th:field="*{idCard}" readonly>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Salary</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <input class="form-control"
+                                           type="text" th:field="*{salary}" readonly>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Email:</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <input name="phoneNumber" placeholder="Phone Number Customer" class="form-control"
+                                           type="text" th:field="*{email}" readonly>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Address</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <input name="addressCustomer" placeholder="Address Customer" class="form-control"
+                                           type="text" th:field="*{address}" readonly>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Phone Number</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <input name="phoneNumber" placeholder="Phone Number Customer" class="form-control"
+                                           type="text" th:field="*{phone}" readonly>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Position</label>
+                            <div class="col-md-4 selectContainer">
+                                <div class="input-group">
+                                    <input name="typeCustomer" placeholder="Type Customer" class="form-control"
+                                           type="text" th:field="*{position.positionName}" readonly>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Position</label>
+                            <div class="col-md-4 selectContainer">
+                                <div class="input-group">
+                                    <input name="typeCustomer" placeholder="Type Customer" class="form-control"
+                                           type="text" th:field="*{division.divisionName}" readonly>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Education Degree</label>
+                            <div class="col-md-4 selectContainer">
+                                <div class="input-group">
+                                    <input name="typeCustomer" placeholder="Type Customer" class="form-control"
+                                           type="text" th:field="*{educationDegree.educationDegreeName}" readonly>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">User</label>
+                            <div class="col-md-4 selectContainer">
+                                <div class="input-group">
+                                    <input name="typeCustomer" placeholder="Type Customer" class="form-control"
+                                           type="text" th:field="*{user.username}" readonly>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Button -->
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <button type="submit" class="btn btn-warning"><a th:href="@{/employee}"
+                                                                                 style="text-decoration: none; color: #0c0c0c">Back
+                                    To Employee List</a></button>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer th:replace="common::footer"></footer>
+</div>
+</body>
+</html>

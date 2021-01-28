@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page Customer</title>
+    <link type="text/css" rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+
+</head>
+<header th:replace="common::hearder"></header>
+<body>
+
+<form th:object="${user}" th:action="@{/register}" method="post">
+    <div align="center">
+    <div>
+        <label>User name:</label>
+        <input type="text" th:field="*{username}">
+    </div>
+    <div>
+        <label>Password:</label>
+        <input type="password" th:field="*{password}">
+    </div>
+    <div>
+        <label>Role:</label>
+        <input type="checkbox" name="roles"
+               th:each="role : ${roleList}"
+               th:text="${role.name}"
+               th:value="${role.id}"
+               th:field="*{roles}"
+        />
+    </div>
+    <button type="submit" class="btn btn-warning">Create</button>
+    </div>
+</form>
+<footer th:replace="common::footer"></footer>
+<script src="/bootstrap/jquery/jquery-3.5.1.min.js"></script>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+<script src="/bootstrap/js/popper.min.js"></script>
+</body>
+</html>

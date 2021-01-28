@@ -2,18 +2,35 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Page Customer</title>
+    <title>Page Employee</title>
     <link type="text/css" rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
 
 </head>
 <body>
 <header th:replace="common::hearder"></header>
 
+<!--<div align="center" class="row">-->
+<!--    <div class="col-md-6"></div>-->
+
+<!--    <div class="col-md-4">-->
+<!--        <form action="/employee/">-->
+<!--            <input class="form-control mr-sm-2" type="text" placeholder="Search By Name"-->
+<!--                   style="width: 250px; margin-top: -105px; margin-left: 200px" name="nameSearch"-->
+<!--                   th:value="${nameSearch}">-->
+<!--            <button class="btn btn-success" type="submit" style="margin-left: -120px; margin-top: -152px" value="Search"-->
+<!--            >Search-->
+<!--            </button>-->
+<!--        </form>-->
+<!--    </div>-->
+
+<!--    <div class="col-md-2"></div>-->
+<!--</div>-->
+
 <div align="center" class="row">
     <div class="col-md-6"></div>
 
     <div class="col-md-5">
-        <form action="/customer">
+        <form action="/employee">
             <input class="col-md-8" type="text" placeholder="Search By Name"
                    style="width: 250px; margin-top: -105px; margin-left: 200px" name="nameSearch"
                    th:value="${nameSearch}">
@@ -27,14 +44,14 @@
 </div>
 
 <div align="center">
-    <h1 style="margin-top: -20px; margin-bottom: 12px">Customer List</h1>
-<!--    <button type="submit" class="btn btn-warning" style="margin-top: -13px; margin-bottom: 3px"><a-->
-<!--            th:href="@{/customer/create}"-->
-<!--            style="text-decoration: none; color: #0c0c0c"><i class="fas fa-plus" style="color: #6c757d"></i> Add New-->
-<!--        Customer</a>-->
-<!--    </button>-->
+    <h1 style="margin-top: -20px; margin-bottom: 12px">Employee List</h1>
+    <!--    <button type="submit" class="btn btn-warning" style="margin-top: -13px; margin-bottom: 3px"><a-->
+    <!--            th:href="@{/customer/create}"-->
+    <!--            style="text-decoration: none; color: #0c0c0c"><i class="fas fa-plus" style="color: #6c757d"></i> Add New-->
+    <!--        Customer</a>-->
+    <!--    </button>-->
     <button type="button" class="btn btn-primary" id="btnModalCreate">
-        Add new Customer
+        Add new Employee
     </button>
 </div>
 
@@ -45,57 +62,65 @@
     <tr>
         <th scope="col">ID</th>
         <th scope="col">Name</th>
-        <th scope="col">ID card</th>
 <!--        <th scope="col">Birthday</th>-->
-        <th scope="col">Gender</th>
-        <th scope="col">Type Customer</th>
-        <th scope="col">Email</th>
+        <th scope="col">ID Card</th>
+<!--        <th scope="col">Salary</th>-->
+<!--        <th scope="col">Phone</th>-->
+<!--        <th scope="col">Email</th>-->
 <!--        <th scope="col">Address</th>-->
+        <th scope="col">Position</th>
+<!--        <th scope="col">Education Degree</th>-->
+<!--        <th scope="col">Division</th>-->
+        <th scope="col">User</th>
         <th scope="col">Action</th>
     </tr>
     </thead>
     <tbody>
-    <tr th:each="customer:${customerList}">
-        <td th:text="${customer.id}"></td>
-        <td th:text="${customer.name}"></td>
-        <td th:text="${customer.idCard}"></td>
-<!--        <td th:text="${customer.birthday}"></td>-->
-        <td th:text="${customer.gender}"></td>
-        <td th:text="${customer.typeCustomer.name}"></td>
-        <td th:text="${customer.email}"></td>
-<!--        <td th:text="${customer.address}"></td>-->
+    <tr th:each="employee:${employeeList}">
+        <td th:text="${employee.id}"></td>
+        <td th:text="${employee.name}"></td>
+<!--        <td th:text="${employee.birthDay}"></td>-->
+        <td th:text="${employee.idCard}"></td>
+<!--        <td th:text="${employee.salary}"></td>-->
+<!--        <td th:text="${employee.phone}"></td>-->
+<!--        <td th:text="${employee.email}"></td>-->
+<!--        <td th:text="${employee.address}"></td>-->
+        <td th:text="${employee.position.getPositionName()}"></td>
+<!--        <td th:text="${employee.educationDegree.getEducationDegreeName()}"></td>-->
+<!--        <td th:text="${employee.division.getDivisionName()}"></td>-->
+        <td th:text="${employee.user.getUsername()}"></td>
         <td>
-<!--            <button type="button" class="btn btn-success" id="btnModalWiew"-->
-<!--                    th:onclick="'javascript:showView(\''+ ${customer.id} + '\');'">-->
-<!--                View-->
-<!--            </button>-->
-<!--            <button type="button" class="btn btn-success" id="btnModalEdit"-->
-<!--                    th:onclick="'javascript:showEdit(\''+ ${customer.id} + '\');'">-->
-<!--                Edit-->
-<!--            </button>-->
-<!--            <button type="button" class="btn btn-danger" id="btnModalDelete"-->
-<!--                    th:onclick="'javascript:showDelete(\''+ ${customer.id} + '\');'">-->
-<!--                Delete-->
-<!--            </button>-->
-            <button type="button" class="btn btn-info" id="btnModalDetail" th:data1="${customer.id}"
+            <!--            <button type="button" class="btn btn-success" id="btnModalWiew"-->
+            <!--                    th:onclick="'javascript:showView(\''+ ${customer.id} + '\');'">-->
+            <!--                View-->
+            <!--            </button>-->
+            <!--            <button type="button" class="btn btn-success" id="btnModalEdit"-->
+            <!--                    th:onclick="'javascript:showEdit(\''+ ${customer.id} + '\');'">-->
+            <!--                Edit-->
+            <!--            </button>-->
+            <!--            <button type="button" class="btn btn-danger" id="btnModalDelete"-->
+            <!--                    th:onclick="'javascript:showDelete(\''+ ${customer.id} + '\');'">-->
+            <!--                Delete-->
+            <!--            </button>-->
+            <button type="button" class="btn btn-info" id="btnModalDetail" th:data1="${employee.id}"
                     th:onclick="'javascript:showDetail(this.getAttribute(\'data1\'));'">
                 Detail
             </button>
-            <button type="button" class="btn btn-success" id="btnModalEdit" th:data2="${customer.id}"
+            <button type="button" class="btn btn-success" id="btnModalEdit" th:data2="${employee.id}"
                     th:onclick="'javascript:showEdit(this.getAttribute(\'data2\'));'">
                 Edit
             </button>
-            <button type="button" class="btn btn-danger" id="btnModalDelete" th:data3="${customer.id}"
+            <button type="button" class="btn btn-danger" id="btnModalDelete" th:data3="${employee.id}"
                     th:onclick="'javascript:showDelete(this.getAttribute(\'data3\'));'">
                 Delete
             </button>
-<!--            <a th:href="@{/customer/view/{id}(id=${customer.getId()})}"><i class="fa fa-eye"-->
-<!--                                                                           style="color: blue">View</i></a>-->
-<!--            <a th:href="@{/customer/edit/{id}(id=${customer.getId()})}"><i class="material-icons"-->
-<!--                                                                           style="color: hotpink">Edit</i></a>-->
-<!--            <a data-toggle="modal" data-target="#deleteCustomerModal" href="#"-->
-<!--               th:data-id="${customer.id}" class="delete" title="Delete"><i class="material-icons"-->
-<!--                                                                            style="color: red">Delete</i></a>-->
+            <!--            <a th:href="@{/customer/view/{id}(id=${customer.getId()})}"><i class="fa fa-eye"-->
+            <!--                                                                           style="color: blue">View</i></a>-->
+            <!--            <a th:href="@{/customer/edit/{id}(id=${customer.getId()})}"><i class="material-icons"-->
+            <!--                                                                           style="color: hotpink">Edit</i></a>-->
+            <!--            <a data-toggle="modal" data-target="#deleteCustomerModal" href="#"-->
+            <!--               th:data-id="${customer.id}" class="delete" title="Delete"><i class="material-icons"-->
+            <!--                                                                            style="color: red">Delete</i></a>-->
         </td>
     </tr>
     </tbody>
@@ -144,11 +169,11 @@
 <!------------------------------------------------------------------------------------------------------------------->
 
 <div style="margin-left: 1230px">
-    <a th:if="${customerList.hasPrevious()}"
-       th:href="@{/customer(page = ${customerList.number - 1}, nameSearch = ${nameSearch})}">Previous</a>
-    <span th:text="${customerList.number + 1}"></span>/<span th:text="${customerList.totalPages}"></span>
-    <a th:if="${customerList.hasNext()}"
-       th:href="@{/customer(page = ${customerList.number + 1}, nameSearch = ${nameSearch})}">Next</a>
+    <a th:if="${employeeList.hasPrevious()}"
+       th:href="@{/employee(page = ${employeeList.number - 1}, nameSearch = ${nameSearch})}">Previous</a>
+    <span th:text="${employeeList.number + 1}"></span>/<span th:text="${employeeList.totalPages}"></span>
+    <a th:if="${employeeList.hasNext()}"
+       th:href="@{/employee(page = ${employeeList.number + 1}, nameSearch = ${nameSearch})}">Next</a>
 </div>
 
 <footer th:replace="common::footer"></footer>
@@ -161,7 +186,7 @@
     $("#btnModalCreate").click(function () {
         $.ajax({
             type: "GET",
-            url: "/customer/create",
+            url: "/employee/create",
             dataType: "HTML",
             success: function (data) {
                 $(".modal-body").html(data);
@@ -172,7 +197,7 @@
     function showEdit(id) {
         $.ajax({
             type: "GET",
-            url: "/customer/edit/"+id,
+            url: "/employee/edit/"+id,
             dataType: "HTML",
             success: function (data) {
                 $(".modal-body").html(data);
@@ -184,7 +209,7 @@
         console.log(id);
         $.ajax({
             type: "GET",
-            url: "/customer/view/"+id,
+            url: "/employee/view/"+id,
             dataType: "HTML",
             success: function (data) {
                 $(".modal-body").html(data);
@@ -206,7 +231,7 @@
     function showDelete(id) {
         $.ajax({
             type: "GET",
-            url: "/customer/delete/"+id,
+            url: "/employee/delete/"+id,
             dataType: "HTML",
             success: function (data) {
                 $(".modal-body").html(data);
