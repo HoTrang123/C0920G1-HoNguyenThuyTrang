@@ -1,119 +1,130 @@
 package com.codegym.model;
 
-import org.hibernate.annotations.GenericGenerator;
 import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.validation.Errors;
-import org.springframework.validation.Validator;
 
 import javax.persistence.*;
 
-import javax.validation.ValidationProviderResolver;
 import javax.validation.constraints.*;
 import java.util.Date;
 
-@Entity(name = "giaoDich")
-public class GiaoDich implements Validator {
+@Entity(name = "question")
+public class Question {
     @Id
-    @GeneratedValue(generator = "my_generator")
-    @GenericGenerator(name = "my_generator", strategy = "com.codegym.common.MyGenerator")
-    private String idGiaoDich;
-    private String tenGiaoDich;
-    private String loaiGiaoDich;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
+
+    @NotBlank(message = "Do Not Blank")
+    @Size(max = 100, min = 5, message = "tu 5 den 100 ki tu")
+    private String title;
+
+    @NotBlank(message = "Do Not Blank")
+    private String questionss;
+
+    @Size(max = 100, min = 5, message = "tu 5 den 500 ki tu")
+    private String answer;
+
+    @NotBlank(message = "Do Not Blank")
+    private String status;
 
     @DateTimeFormat(pattern = "yyyy-mm-dd")
-    @PastOrPresent
-    private Date ngayGiaoDich;
+    private Date dateCreate;
 
-    @DateTimeFormat(pattern = "yyyy-mm-dd")
-    private Date ngayKetThuc;
+//    noi
 
-    @Min(value = 1, message = "Đơn giá phải lớn hơn 0")
-    private int donGia;
     @ManyToOne
-    @JoinColumn(name = "ma_khach_hang", nullable = false)
-    private KhachHang khachHang;
+    @JoinColumn(name = "type_question", referencedColumnName = "id")
+    private QuestionType questionType;
 
-    public GiaoDich() {
+    @ManyToOne
+    @JoinColumn(name = "user_create", referencedColumnName = "id")
+    private User userCreate;
+
+    @ManyToOne
+    @JoinColumn(name = "user_feedback", referencedColumnName = "id")
+    private User userFeedback;
+    //
+
+    public Question() {
     }
 
-    public String getIdGiaoDich() {
-        return idGiaoDich;
+    public String getQuestionss() {
+        return questionss;
     }
 
-    public void setIdGiaoDich(String idGiaoDich) {
-        this.idGiaoDich = idGiaoDich;
+    public void setQuestionss(String questionss) {
+        this.questionss = questionss;
     }
 
-    public String getTenGiaoDich() {
-        return tenGiaoDich;
+    public Integer getId() {
+        return id;
     }
 
-    public void setTenGiaoDich(String tenGiaoDich) {
-        this.tenGiaoDich = tenGiaoDich;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public String getLoaiGiaoDich() {
-        return loaiGiaoDich;
+    public String getTitle() {
+        return title;
     }
 
-    public void setLoaiGiaoDich(String loaiGiaoDich) {
-        this.loaiGiaoDich = loaiGiaoDich;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public Date getNgayGiaoDich() {
-        return ngayGiaoDich;
+    public String getQuestion() {
+        return questionss;
     }
 
-    public void setNgayGiaoDich(Date ngayGiaoDich) {
-        this.ngayGiaoDich = ngayGiaoDich;
+    public void setQuestion(String question) {
+        this.questionss = question;
     }
 
-    public Date getNgayKetThuc() {
-        return ngayKetThuc;
+    public String getAnswer() {
+        return answer;
     }
 
-    public void setNgayKetThuc(Date ngayKetThuc) {
-        this.ngayKetThuc = ngayKetThuc;
+    public void setAnswer(String answer) {
+        this.answer = answer;
     }
 
-    public int getDonGia() {
-        return donGia;
+    public String getStatus() {
+        return status;
     }
 
-    public void setDonGia(int donGia) {
-        this.donGia = donGia;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
-    public KhachHang getKhachHang() {
-        return khachHang;
+    public Date getDateCreate() {
+        return dateCreate;
     }
 
-    public void setKhachHang(KhachHang khachHang) {
-        this.khachHang = khachHang;
+    public void setDateCreate(Date dateCreate) {
+        this.dateCreate = dateCreate;
     }
 
-    @Override
-    public boolean supports(Class<?> clazz) {
-        return false;
+    public QuestionType getQuestionType() {
+        return questionType;
     }
 
-    @Override
-    public void validate(Object target, Errors errors) {
+    public void setQuestionType(QuestionType questionType) {
+        this.questionType = questionType;
+    }
 
-        GiaoDich giaoDich = (GiaoDich) target;
+    public User getUserCreate() {
+        return userCreate;
+    }
 
-        Date inputDate1 = giaoDich.getNgayGiaoDich();
-        Date inputDate2 = giaoDich.getNgayKetThuc();
+    public void setUserCreate(User userCreate) {
+        this.userCreate = userCreate;
+    }
 
-        if (inputDate1 == null){
-            errors.rejectValue("ngayGiaoDich","errorInput");
-        }
-        if (inputDate2 == null) {
-            errors.rejectValue("ngayKetThuc", "errorInput");
-        }
-        if (inputDate1 != null && inputDate2!= null && inputDate2.before(inputDate1)) {
-            errors.rejectValue("ngayKetThuc", "errorEndDate");
-        }
+    public User getUserFeedback() {
+        return userFeedback;
+    }
+
+    public void setUserFeedback(User userFeedback) {
+        this.userFeedback = userFeedback;
     }
 }
 

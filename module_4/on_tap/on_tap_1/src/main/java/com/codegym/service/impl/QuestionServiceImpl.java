@@ -1,7 +1,9 @@
-package com.codegym.service;
+package com.codegym.service.impl;
 
-import com.codegym.model.GiaoDich;
-import com.codegym.repository.GiaoDichRepository;
+import com.codegym.model.Question;
+import com.codegym.repository.QuestionRepository;
+import com.codegym.repository.UserRepository;
+import com.codegym.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -10,38 +12,42 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service
-public class GiaoDichServiceImpl implements GiaoDichService {
+public class QuestionServiceImpl implements QuestionService {
     @Autowired
-    GiaoDichRepository giaoDichRepository;
+    QuestionRepository questionRepository;
+
+
+
+
     @Override
-    public List<GiaoDich> findAll() {
-        return giaoDichRepository.findAll();
+    public List<Question> findAll() {
+        return questionRepository.findAll();
     }
 
     @Override
-    public Page<GiaoDich> findAll(Pageable pageable) {
-        return giaoDichRepository.findAll(pageable);
+    public Page<Question> findAll(Pageable pageable) {
+        return questionRepository.findAll(pageable);
     }
 
     @Override
-    public void save(GiaoDich giaoDich) {
-        giaoDichRepository.save(giaoDich);
+    public void save(Question question) {
+        questionRepository.save(question);
     }
 
     @Override
-    public GiaoDich findById(String id) {
-        return giaoDichRepository.findById(id).orElse(null);
+    public Question findById(Integer id) {
+        return questionRepository.findById(id).orElse(null);
     }
 
     @Override
-    public void delete(String id) {
-        giaoDichRepository.deleteById(id);
+    public void delete(Integer id) {
+        questionRepository.deleteById(id);
     }
 
-    @Override
-    public List<GiaoDich> search( String tenGiaoDich, String tenKhachHang) {
-        return giaoDichRepository.search( tenGiaoDich , tenKhachHang);
-    }
+//    @Override
+//    public List<Question> search(String title, Integer questionType) {
+//        return questionRepository.search( title , questionType);
+//    }
 
 
 //    @Override

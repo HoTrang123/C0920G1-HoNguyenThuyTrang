@@ -2,10 +2,10 @@ package com.codegym.service;
 
 
 
-import com.codegym.model.KhachHang;
+import com.codegym.model.QuestionType;
 
 import java.util.List;
 
-public interface KhachHangService {
-    List<KhachHang> findAll();
+public interface QuestionTypeService {
+    List<QuestionType> findAll();
 }

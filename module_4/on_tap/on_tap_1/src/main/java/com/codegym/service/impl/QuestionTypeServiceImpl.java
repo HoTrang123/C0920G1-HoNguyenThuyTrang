@@ -1,18 +1,19 @@
-package com.codegym.service;
+package com.codegym.service.impl;
 
-import com.codegym.model.KhachHang;
-import com.codegym.repository.KhachHangRepository;
+import com.codegym.model.QuestionType;
+import com.codegym.repository.QuestionTypeRepository;
+import com.codegym.service.QuestionTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
 import java.util.List;
 @Service
-public class KhachHangServiceImpl implements KhachHangService {
+public class QuestionTypeServiceImpl implements QuestionTypeService {
     @Autowired
-    KhachHangRepository khachHangRepository;
+    QuestionTypeRepository questionTypeRepository;
     @Override
-    public List<KhachHang> findAll() {
-        return khachHangRepository.findAll();
+    public List<QuestionType> findAll() {
+        return questionTypeRepository.findAll();
     }
 }

@@ -1,6 +1,7 @@
 package com.codegym.model.employee;
 
 
+import com.codegym.model.contract.Contract;
 import com.codegym.model.user.User;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.validation.Errors;
@@ -11,6 +12,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 public class Employee implements Validator {
@@ -42,6 +44,7 @@ public class Employee implements Validator {
 
     @NotBlank(message = "Do Not Blank")
     private String address;
+    // ------------------------------ Tạo mối quan hệ ------------------------------
 
     @ManyToOne
     @JoinColumn(name = "position_id" , nullable=false)
@@ -58,6 +61,9 @@ public class Employee implements Validator {
     @ManyToOne
     @JoinColumn(name = "username")
     private User user;
+
+    @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL)
+    private List<Contract> contractList;
 
     public Employee() {
     }

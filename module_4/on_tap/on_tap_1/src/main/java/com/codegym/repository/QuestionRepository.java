@@ -1,8 +1,6 @@
 package com.codegym.repository;
 
-import com.codegym.model.GiaoDich;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
+import com.codegym.model.Question;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -10,9 +8,9 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface GiaoDichRepository extends JpaRepository<GiaoDich, String> {
+public interface QuestionRepository extends JpaRepository<Question, Integer> {
 
-    @Query("select c from giaoDich c where c.loaiGiaoDich like %?1% and c.khachHang.tenKhachHang like %?2%")
-    List<GiaoDich> search(String tenGiaoDich, String tenKhachHang);
+    @Query("select c from question c where c.title like %?1% and c.questionType.name like %?2%")
+    List<Question> search(String title, String questionType);
 
 }

@@ -1,5 +1,6 @@
 package com.codegym.model.customer;
 
+import com.codegym.model.contract.Contract;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
@@ -7,6 +8,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import java.util.Date;
+import java.util.List;
 
 @Entity(name = "customer")
 public class Customer {
@@ -45,6 +47,9 @@ public class Customer {
     @ManyToOne
     @JoinColumn(name = "type_customer_id", referencedColumnName = "id")
     private TypeCustomer typeCustomer;
+
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
+    private List<Contract> contractList;
 //    ---------------------------------------------------------------------------------------------------
 
 

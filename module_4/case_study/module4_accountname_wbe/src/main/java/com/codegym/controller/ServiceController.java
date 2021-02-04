@@ -1,9 +1,8 @@
 package com.codegym.controller;
 
-
-import com.codegym.entity.service.RentType;
-import com.codegym.entity.service.Service;
-import com.codegym.entity.service.ServiceType;
+import com.codegym.model.service.RentType;
+import com.codegym.model.service.Service;
+import com.codegym.model.service.ServiceType;
 import com.codegym.service.service.ServiceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
